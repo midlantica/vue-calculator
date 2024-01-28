@@ -81,7 +81,7 @@
 
 <style scoped>
   .calculator {
-    @apply max-w-[15rem] grid grid-cols-4 auto-rows-[minmax(50px,_auto)] justify-center mt-1 mx-auto text-center
+    @apply max-w-[14rem] grid grid-cols-4 auto-rows-[minmax(50px,_auto)] justify-center mt-5 mx-auto text-center
   }
 
   .calcField {
