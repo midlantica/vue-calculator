@@ -27,7 +27,7 @@
   import { ref } from 'vue'
 
   const previous = ref(null)
-  const current = ref('600')
+  const current = ref('')
   const operator = ref(null)
   const operatorClicked = ref(false)
 
