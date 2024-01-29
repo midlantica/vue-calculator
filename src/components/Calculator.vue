@@ -1,9 +1,9 @@
 <template>
   <div class="calculator">
     <div class="calcField rounded-t-lg">{{ current || '0' }}</div>
-    <div class="btn !bg-[#3c3c3c]" @click="clear">C</div>
-    <div class="btn !bg-[#3c3c3c]" @click="sign">+/-</div>
-    <div class="btn !bg-[#3c3c3c]" @click="percent">%</div>
+    <div class="btn btnDark" @click="clear">C</div>
+    <div class="btn btnDark" @click="sign">+/-</div>
+    <div class="btn btnDark" @click="percent">%</div>
     <div class="btn operator" @click="divide">÷</div>
     <div class="btn" @click="append('7')">7</div>
     <div class="btn" @click="append('8')">8</div>
@@ -62,7 +62,7 @@
     setPrevious()
   }
   const subtract = () => {
-    operator.value = (a, b) => b - a
+    operator.value = (a, b) => a - b
     setPrevious()
   }
   const add = () => {
@@ -81,17 +81,21 @@
 
 <style scoped>
   .calculator {
-    @apply max-w-[14rem] grid grid-cols-4 auto-rows-[minmax(50px,_auto)] justify-center mt-5 mx-auto text-center
+    @apply max-w-[14rem] grid grid-cols-4 auto-rows-[minmax(48px,_auto)] justify-center mt-5 mx-auto text-center;
   }
 
   .calcField {
-    @apply bg-gray-800 text-white col-span-full text-3xl font-extralight flex items-center justify-center shadow-inner cursor-text;
+    @apply bg-[#24252c] text-white col-span-full text-5xl font-extralight flex items-center justify-center shadow-inner cursor-text py-[.3rem];
   }
   .btn {
-    @apply bg-[#5c5c5c] text-white border-[.5px] border-[#272727]/80 align-middle text-2xl font-extralight flex items-center justify-center cursor-pointer hover:bg-gray-300;
+    @apply bg-[#5c5c5c] text-white border-[.5px] border-[#272727]/80 align-middle text-[1.75rem] font-bold flex items-center justify-center cursor-pointer hover:bg-[#424242];
 
     &.operator {
-      @apply !bg-amber-500 hover:!bg-amber-600;
+      @apply !bg-[hsl(36.15deg_100%_52%)] hover:!bg-[hsl(36.15deg_100%_42%)] text-[1.5rem] pb-1;
+    }
+
+    &.btnDark {
+      @apply !bg-[#3c3c3c] hover:!bg-[#272727];
     }
   }
 

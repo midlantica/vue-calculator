@@ -1,1 +1,12 @@
 @import './base.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+
+* {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+body {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  @apply bg-gray-950 mx-auto w-[400px] font-thin;
+}
